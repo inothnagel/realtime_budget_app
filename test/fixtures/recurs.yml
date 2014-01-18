@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  last_recur: 2012-03-23 18:30:32
+  next_recur: 2012-03-23 18:30:32
+  account: 
+  user: 
+
+two:
+  name: MyString
+  last_recur: 2012-03-23 18:30:32
+  next_recur: 2012-03-23 18:30:32
+  account: 
+  user: 

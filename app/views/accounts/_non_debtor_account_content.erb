@@ -1,0 +1,15 @@
+<div id="non_debtor_account_content">
+
+  <div id="cash_value_box">
+    <div id="cash_per_day"><%= "Budget per day per person:"%></div>
+
+    <div id="cash_difference_box">
+      <div id="<%= get_cash_difference_id(@account.cash) %>">
+        <%= "#{@account.cash_per_day_per_person(2)}" %>
+      </div>
+    </div>
+
+    <div id="cash_per_day"><%= "Balance: #{@account.cash} | Target Balance: #{@account.cash_supposed} | Days Left: #{@account.days_left}" %></div>
+  </div>
+
+</div>

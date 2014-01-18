@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @debtor.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @debtor.email %>
+</p>
+
+<div id="debtor_accounts_list">
+  <h2>Accounts:</h2>
+  <ul>
+    <% @accounts.each do |account| %>
+    <li>
+      <%= link_to account.cash, "/accounts/#{account.id}/" %>
+    </li>
+    <% end %>
+  </ul>
+</div>
+
+<%= link_to 'Edit', edit_debtor_path(@debtor) %> |
+<%= link_to 'Back', debtors_path %>

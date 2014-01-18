@@ -1,0 +1,15 @@
+
+<h3>Transaction</h3>
+<p>Created By: <%= @user.name_or_email %></p>
+<p>Account: <%= @account.name %></p>
+<p>Amount: <%= @transaction.value %></p>
+<p>Description: <%= @transaction.description %></p>
+
+<h3>Account</h3>
+<p>Cash Spent Today: <%= @account.cash_spent_today %></p>
+<% if @account.overspent_today? %>
+  <p>Overspent Today: <%= @account.cash_delta_today %></p>
+<% end %>
+<p>Days Ahead or Behind: <%= @account.days_ahead_or_behind %></p>
+<p>Balance: <%= @account.cash %></p>
+<p>Daily Budget: <%= @account.daily_budget %></p>

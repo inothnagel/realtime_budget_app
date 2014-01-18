@@ -1,0 +1,27 @@
+<% @accounts.find(:all, :order => 'name ASC').each do |account| %>
+  <a href="<%= account_path(account) %>">
+    <div class="account <%=behind_flag(account)%>">
+      <span class="name"><%= account.name %></span>
+      <span class="message">
+      	<%= ahead_or_behind_message(account) %>
+      	<% if account.penalty_percentage > 0 %>
+      		(<%= account.penalty_percentage %>%)
+      	<% end %>
+      </span>
+    </div>
+  </a>
+<% end %>
+
+<br />
+
+<div class="account info">
+  <span class="name">Account Balance</span>
+  <span class="message">R<%= @accounts_total %></span>
+</div>
+
+<div class="account info">
+  <span class="name">Total Budget</span>
+  <span class="message">R<%= @budget_total %></span>
+</div>
+
+<%= link_to 'New Account', new_account_path, :data => {:role => "button"} %>

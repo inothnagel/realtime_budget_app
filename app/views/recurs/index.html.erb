@@ -1,0 +1,21 @@
+<h1>Listing recurs</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Account</th>
+    <th>Value</th>
+ </tr>
+
+<% @recurs.each do |recur| %>
+  <tr>
+    <td><%= link_to recur.name, recur %></td>
+    <td><%= link_to recur.account_display_string, recur.account %></td>
+    <td><%= recur.value %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Recur', new_recur_path %>

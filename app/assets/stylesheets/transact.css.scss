@@ -1,0 +1,85 @@
+// Place all the styles related to the transact controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.button_h1 {
+  font-size: 30px;
+  display:inline-block;
+  padding:6px 12px;
+  margin: 2px;
+  font-weight:bold;
+  text-decoration: none;
+}
+
+#cash_difference_box{
+  width: 100%;
+/*text-align: center;*/
+/* Firefox */
+  display:-moz-box;
+  -moz-box-orient:horizontal;
+  -moz-box-pack:center;
+  -moz-box-align:center;
+
+/* Safari and Chrome */
+  display:-webkit-box;
+  -webkit-box-orient:horizontal;
+  -webkit-box-pack:center;
+  -webkit-box-align:center;
+
+/* W3C */
+  display:box;
+  box-orient:horizontal;
+  box-pack:center;
+  box-align:center;
+}
+
+#cash_per_day{
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px;
+}
+
+#cash_difference_negative{
+  display: block;
+  font-size: 30px;
+  color: red;
+  font-weight: bold;
+  margin: 10px;
+  margin-bottom: 20px;
+}
+
+#cash_difference_positive{
+  display: block;
+  font-size: 30px;
+  color: green;
+  font-weight: bold;
+  margin: 10px;
+  margin-bottom: 20px;
+}
+       
+.button {
+  display:inline-block;
+  padding:6px 12px;
+  margin: 2px;
+  font-weight:bold;
+  text-decoration: none;
+}.button:hover {
+   background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+   background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+   background-color:#dfdfdf;
+   color:#000000;
+}.button:active {
+    position:relative;
+    top:1px;
+    color:#000000;
+}.button:visited{
+     color:#000000;
+}
+
+#new_transaction_form {
+  input {
+    width: 100%;
+  }
+}

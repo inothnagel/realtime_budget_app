@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Value:</b>
+  <%= @transaction.value %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @transaction.description %>
+</p>
+
+<p>
+  <b>Executed:</b>
+  <%= @transaction.executed %>
+</p>
+
+<%= link_to 'Reverse Transaction', reverse_transaction_path(@transaction), :class=>"button" %>
+<br />
+
+<%= link_to "Delete Transaction", "/transactions/#{@transaction.id}/", :method=>:delete, :class=>"button" %>
+<%= link_to 'Edit', edit_transaction_path(@transaction), :class=>"button" %>
+<%= link_to 'Back', transactions_path, :class=>"button" %>

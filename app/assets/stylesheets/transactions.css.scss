@@ -1,0 +1,33 @@
+// Place all the styles related to the Transactions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+
+
+
+tr, td, th {
+  border: 0px solid white;
+}
+
+table {
+  width: 100%;
+}          
+
+table th {
+  font-weight: bold;
+}
+
+td.transaction_value{
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  /*background: white;*/
+}
+
+tr:nth-child(odd) {
+  background: rgb(208, 232, 236);
+}

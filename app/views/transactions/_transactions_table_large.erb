@@ -1,0 +1,27 @@
+<div id="transactions_table_large">
+  <table>
+    <tr>
+      <th>Date</th>
+      <th>User</th>
+      <th>Value</th>
+      <th>Account Value</th>
+      <th>Description</th>
+      <th></th>
+    </tr>
+    <% @transactions.each do |transaction| %>
+
+        <tr>
+          <td>
+            <a href="<%= "/transactions/#{transaction.id}/" %>">
+            <%= transaction.date_string %></td>
+          </a>
+          <td><%= transaction.user_email %></td>
+          <td class="transaction_value"><%= transaction.value %></td>
+          <td><%= transaction.account_value %></td>
+          <td><%= transaction.description %></td>
+          <td><%= link_to "Delete", transaction, :method=>:delete %></td>
+        </tr>
+
+    <% end %>
+  </table>
+</div>

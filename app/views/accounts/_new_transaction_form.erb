@@ -1,0 +1,7 @@
+<div id="new_transaction_form">
+  <%= form_tag("/accounts/#{@account.id}/subtract") do %>
+      <%= text_field_tag :description, nil, :placeholder => "Description" %><br>
+      <%= text_field_tag :amount, nil, :placeholder => "Amount" %><br>
+      <%= submit_tag("Subtract") %>
+  <% end %>
+</div>

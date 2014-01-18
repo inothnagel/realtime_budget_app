@@ -1,0 +1,62 @@
+
+minesLaid = 0
+
+while (minesLaid < 9) {
+  i = random
+  j = random
+
+  if ( $('#tile'+i+j).hasClass('mine') != true ) {
+    addclass
+    minesLaid++
+  }
+}
+
+
+var countMines = function(i, j) {
+  var mines = 0;
+  for (k=i-1; k<=i+1; k++) {
+    for (l=i-1; l<=i+1; l++) {
+      if( $('#tile' + k + l).hasClass('mine')) {
+        mines++;
+      }
+    }
+  }
+  return mines;
+}
+
+var countAllMines = function {
+  for (i=0; i<9; i++) {
+    for (j=0; j<9; j++) {
+      tile = grid[i][j]
+      tile.mineCounter = countMines(i, j);
+    }
+  }
+}
+
+
+setUpGrid();
+drawGrid();
+
+
+
+
+
+
+---
+
+Tile.setMine = function() {
+  if (this.isMine()) {
+    this.mine == true;
+    grid.minesLaid++;
+  }
+}
+
+Grid.layMines = function {
+  while (grid.minesLaid < 9) { grid.layRandomMine(); }
+}
+
+Grid.layRandomMine = function {
+  tile = this.getRandomTile();
+  tile.setMine();
+}
+

@@ -1,0 +1,110 @@
+// Place all the styles related to the Accounts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#main_body{
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
+  font-family:Helvetica;
+  min-width: 300px;
+  max-width: 400px;
+  text-shadow:none;
+}
+
+.penalty-message {
+  display: none;
+  font-style: italic;
+  padding-top: 10px;
+  font-size: 12px;
+}
+
+.penalty-message.behind {
+  display: block;
+}
+
+.account {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #B7D895;
+
+  text-align: left;
+
+  overflow: hidden;
+
+  &.info {
+    background-color: #E6E6E6;
+  }
+
+  &.behind {
+    background-color: #F55;
+    color: #333;
+
+    .message {
+      
+    }
+
+  }
+
+  .name {
+    font-size: 18px;
+    color: #333;
+    float: left;
+  }
+
+  .message {
+    margin-top: 5px;
+    // font-size: 14px;
+    float: right;
+    color: #333;
+  }
+}
+
+.checkbox{
+  padding: 5px 0px;
+  margin: 5px 0px;
+  /*border: 1px solid black;*/
+}
+
+#cash_value_box {
+  border-radius: 5px;
+  /*border: 3px solid green;*/
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  /*box-shadow: 2px 2px 2px gray;*/
+}
+
+#new_transaction_form {
+  float: left;
+  border-radius: 5px;
+  /*border: 3px solid green;*/
+  padding: 5px;
+  width: 95%;
+  height: 100%;
+  text-align: center;
+  margin: 4px 0px;;
+  /*box-shadow: 2px 2px 2px gray;*/
+}
+
+input[type="text"], input[type="number"]{
+  border-radius: 5px;
+  /*border: 2px solid green;*/
+  padding: 3px;
+  margin: 3px 0px;
+  width: 95%;
+  font-size: 20px;  
+}
+
+input[type="text"]:focus, input[type="number"]:focus{
+  background-color: #ffffe0;
+}
+
+#account_heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+  /*text-shadow: gray 2px 2px 2px;*/
+}

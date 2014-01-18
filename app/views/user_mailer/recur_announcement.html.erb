@@ -1,0 +1,23 @@
+<style>
+  .recur_name{
+      font-weight: bold;
+      font-size: 16;
+  }
+        
+  .account_name{
+      font-weight: bold;
+      font-size: 16;
+  }
+</style>
+
+<p>
+  Fintrack executed the recur named
+
+  <span class="recur_name">
+    <%= @recur.name %>
+  </span>
+  on account
+  <span class="account_name">
+    <%= @account.name %>
+  </span>
+</p>

@@ -1,0 +1,7 @@
+<p>Dear <%= @debtor.name  %>,</p>
+
+<p>This is a reminder that you owe the following amounts on the following accounts:</p>
+
+<% @accounts.each do |account| %>
+<p><%= account.name %>: R<%= account.cash %></p>
+<% end %>

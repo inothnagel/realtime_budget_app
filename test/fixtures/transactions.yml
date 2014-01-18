@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user: 
+  value: 1
+  description: MyString
+  executed: false
+
+two:
+  user: 
+  value: 1
+  description: MyString
+  executed: false

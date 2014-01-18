@@ -1,0 +1,37 @@
+<%= form_for(@recur) do |f| %>
+  <% if @recur.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@recur.errors.count, "error") %> prohibited this recur from being saved:</h2>
+
+      <ul>
+      <% @recur.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+
+    <div class="field">
+      <%= f.label :value %><br />
+      <%= f.text_field :value %>
+    </div>
+
+  <div class="field">
+    <%= f.label :recur_days %><br />
+    <%= f.text_field :recur_days %>
+  </div>
+
+  <div class="field">
+    <%= f.label :account %><br />
+    <%=  collection_select(:recur, :account_id, current_user.accounts, :id, :name, {:prompt=>true}) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

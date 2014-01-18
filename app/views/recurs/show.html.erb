@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @recur.name %>
+</p>
+
+<p>
+  <b>Account:</b>
+  <%= @recur.account.name %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @recur.value %>
+</p>
+
+<p>
+  <b>Recur Days:</b>
+  <%= @recur.recur_days %>
+</p>
+
+<p>
+  <b>Last recur:</b>
+  <%= @recur.last_recur %>
+</p>
+
+<%= render "transactions/transactions_table_small" %>
+
+<%= link_to 'Edit', edit_recur_path(@recur) %> |
+<%= link_to 'Back', recurs_path %> |
+<%= link_to 'Delete', recur_path(@recur), :method => :delete %>

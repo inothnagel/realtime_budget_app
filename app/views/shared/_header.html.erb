@@ -1,0 +1,11 @@
+<div data-role="navbar">
+  <ul>
+    <li><%= link_to "Home", "/" %></li>
+  </ul>
+</div>
+
+<div class="flash">
+  <% flash.each do |key, msg| %>
+      <%= content_tag :div, msg, :class => [key, " message"], :id => "notice_ #{key}" %>
+  <% end %>
+</div>

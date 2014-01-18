@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Metric:</b>
+  <%= @data_point.metric %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @data_point.value %>
+</p>
+
+
+<%= link_to 'Edit', edit_data_point_path(@data_point) %> |
+<%= link_to 'Back', data_points_path %>

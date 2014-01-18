@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fintrack</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+  <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div id="main_body" data-role="page">
+    <div id="header" data-role="header">
+      <%= render "shared/header" %>
+    </div>
+
+    <div data-role="content">
+      <%= yield %>
+    </div>
+
+    <%= render "shared/footer" %>
+  </div>
+
+</body>
+</html>
